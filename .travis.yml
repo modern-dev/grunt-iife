@@ -9,3 +9,7 @@ before_script:
   - npm install -g grunt-cli
 
 install: npm install
+
+addons:
+    code_climate:
+        repo_token: 88b2d43096aee062e48ce09de67e43cc100ce2256371558855ee60ae6700c0b0
