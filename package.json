@@ -1,0 +1,44 @@
+{
+  "name": "grunt-iife",
+  "version": "0.1.0",
+  "description": "Wraps JavaScript code within and IIFE.",
+  "scripts": {
+    "prepublish": "npm test",
+    "test": "grunt eslint && mocha test"
+  },
+  "files": [
+    "tasks/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/virtyaluk/grunt-iife.git"
+  },
+  "keywords": [
+    "gruntplugin",
+    "javascript",
+    "js",
+    "iife",
+    "function",
+    "ecmascript"
+  ],
+  "author": {
+    "name": "Bohdan Shtepan",
+    "email": "virtydev@yandex.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/virtyaluk/grunt-iife/issues"
+  },
+  "homepage": "https://github.com/virtyaluk/grunt-iife",
+  "dependencies": {
+    "lodash.merge": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chalk": "^1.1.1",
+    "esprima": "^2.7.0",
+    "grunt": "^0.4.5",
+    "grunt-eslint": "^17.3.1",
+    "mocha": "^2.3.4"
+  }
+}
