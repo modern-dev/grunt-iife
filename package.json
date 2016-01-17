@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/virtyaluk/grunt-iife",
   "dependencies": {
-    "lodash.merge": "^3.3.2"
+    "lodash.merge": "^4.0.1"
   },
   "devDependencies": {
     "chai": "^3.4.1",
