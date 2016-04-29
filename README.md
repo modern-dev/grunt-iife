@@ -1,17 +1,18 @@
-# grunt-iife v0.1.0
+# grunt-iife
 
-[![Build Status](https://travis-ci.org/virtyaluk/grunt-iife.svg?branch=master)](https://travis-ci.org/virtyaluk/grunt-iife) [![Code Climate](https://codeclimate.com/github/virtyaluk/grunt-iife/badges/gpa.svg)](https://codeclimate.com/github/virtyaluk/grunt-iife) [![Dependency Status](https://gemnasium.com/virtyaluk/grunt-iife.svg)](https://gemnasium.com/virtyaluk/grunt-iife)
+[![Build Status](https://travis-ci.org/virtyaluk/grunt-iife.svg?branch=master)](https://travis-ci.org/virtyaluk/grunt-iife) [![Code Climate](https://codeclimate.com/github/virtyaluk/grunt-iife/badges/gpa.svg)](https://codeclimate.com/github/virtyaluk/grunt-iife) [![Dependency Status](https://gemnasium.com/virtyaluk/grunt-iife.svg)](https://gemnasium.com/virtyaluk/grunt-iife) [![npm version](https://badge.fury.io/js/grunt-iife.svg)](https://badge.fury.io/js/grunt-iife)
+
 
 > A Grunt plugin for wrapping JavaScript code within immediately invoked function expressions (IIFEs).
 
-Wraps JavaScript code within an immediately invoked function expression.
+Wraps JavaScript code within an *immediately invoked function expression*.
 
 
-## Getting Started
+## :cd: Getting Started
 
 This plugin requires Grunt `>=0.4.0`
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+If you haven't used [:link:Grunt](http://gruntjs.com/) before, be sure to check out the [:link:Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [:link:Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```sh
 $ npm install --save-dev grunt-iife
@@ -23,7 +24,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-iife');
 ```
 
-## Usage
+## :zap: Usage
 
 This configuration will wrap JS files using the default options.
 
@@ -55,7 +56,7 @@ console.log(foo);
 }());
 ```
 
-## Options
+## :wrench: Options
 
 You can pass additional options to change output file:
 
@@ -147,6 +148,14 @@ console.log(foo);
 }(window, jQuery));
 ```
 
-## License
+## :green_book: License
 
-MIT © [Bohdan Shtepan](https://github.com/virtyaluk)
+[Licensed under the MIT license.](https://github.com/virtyaluk/grunt-iife/blob/master/LICENSE)
+
+Copyright (c) 2016 Bohdan Shtepan
+
+---
+
+> [modern-dev.com](http://modern-dev.com) &nbsp;&middot;&nbsp;
+> GitHub [@virtyaluk](https://github.com/virtyaluk) &nbsp;&middot;&nbsp;
+> Twitter [@virtyaluk](https://twitter.com/virtyaluk)
