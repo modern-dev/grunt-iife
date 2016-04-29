@@ -1,6 +1,6 @@
 {
   "name": "grunt-iife",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Wraps JavaScript code within and IIFE.",
   "scripts": {
     "test": "grunt eslint && mocha test"
@@ -30,14 +30,14 @@
   },
   "homepage": "https://github.com/virtyaluk/grunt-iife",
   "dependencies": {
-    "lodash.merge": "^3.3.2"
+    "lodash.merge": "^4.3.5",
+	"chalk": "^1.1.3"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "chalk": "^1.1.1",
-    "esprima": "^2.7.0",
-    "grunt": "^0.4.5",
-    "grunt-eslint": "^17.3.1",
-    "mocha": "^2.3.4"
+    "chai": "^3.5.0",
+    "esprima": "^2.7.2",
+    "grunt": "^1.0.1",
+    "grunt-eslint": "^18.1.0",
+    "mocha": "^2.4.5"
   }
 }
