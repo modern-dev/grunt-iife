@@ -26,73 +26,73 @@ describe('IIFE', function() {
         });
 
         it('should apply the correct defaults', function() {
-            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());';
+            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());\n';
 
             expect(iife(this.code)).to.be.equal(expectedResult);
         });
 
         it('should add a \'use strict\' directive when \'useStrict\' is true', function() {
-            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());';
+            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());\n';
 
             expect(iife(this.code, { useStrict: true })).to.be.equal(expectedResult);
         });
 
         it('should not add a \'use strict\' directive when \'useStrict\' is false', function() {
-            var expectedResult = ';(function() {\nvar foo = \'bar\';\n}());';
+            var expectedResult = ';(function() {\nvar foo = \'bar\';\n}());\n';
 
             expect(iife(this.code, { useStrict: false })).to.be.equal(expectedResult);
         });
 
         it('should trim the code when \'trimCode\' is true', function() {
-            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());';
+            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());\n';
 
             expect(iife(this.code, { trimCode: true })).to.be.equal(expectedResult);
         });
 
         it('should not trim the code when \'trimCode\' is false', function() {
-            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n\n\n}());';
+            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n\n\n}());\n';
 
             expect(iife(this.code, { trimCode: false })).to.be.equal(expectedResult);
         });
 
         it('should prepend a semicolon when \'prependSemicolon\' is true', function() {
-            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());';
+            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());\n';
 
             expect(iife(this.code, { prependSemicolon: true })).to.be.equal(expectedResult);
         });
 
         it('should not prepend a semicolon when \'prependSemicolon\' is false', function() {
-            var expectedResult = '(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());';
+            var expectedResult = '(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());\n';
 
             expect(iife(this.code, { prependSemicolon: false })).to.be.equal(expectedResult);
         });
 
         it('should add \'.bind(this)\' when \'bindThis\' is true', function() {
-            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}.bind(this)());';
+            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}.bind(this)());\n';
 
             expect(iife(this.code, { bindThis: true })).to.be.equal(expectedResult);
         });
 
         it('should not add \'.bind(this)\' when \'bindThis\' is false', function() {
-            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());';
+            var expectedResult = ';(function() {\n\'use strict\';\nvar foo = \'bar\';\n}());\n';
 
             expect(iife(this.code, { bindThis: false })).to.be.equal(expectedResult);
         });
 
         it('should add the arguments and parameters specified in \'args\' and \'params\'', function() {
-            var expectedResult = ';(function($, undefined) {\n\'use strict\';\nvar foo = \'bar\';\n}(jQuery));';
+            var expectedResult = ';(function($, undefined) {\n\'use strict\';\nvar foo = \'bar\';\n}(jQuery));\n';
 
             expect(iife(this.code, { args: ['jQuery'], params: ['$', 'undefined'] })).to.be.equal(expectedResult);
         });
 
         it('should use \'params\' values for \'args\' if \'args\' is missing', function() {
-            var expectedResult = ';(function(window) {\n\'use strict\';\nvar foo = \'bar\';\n}(window));';
+            var expectedResult = ';(function(window) {\n\'use strict\';\nvar foo = \'bar\';\n}(window));\n';
 
             expect(iife(this.code, { params: ['window'] })).to.be.equal(expectedResult);
         });
 
         it('should use \'args\' values for \'params\' if \'params\' is missing', function() {
-            var expectedResult = ';(function(window) {\n\'use strict\';\nvar foo = \'bar\';\n}(window));';
+            var expectedResult = ';(function(window) {\n\'use strict\';\nvar foo = \'bar\';\n}(window));\n';
 
             expect(iife(this.code, { args: ['window'] })).to.be.equal(expectedResult);
         });
