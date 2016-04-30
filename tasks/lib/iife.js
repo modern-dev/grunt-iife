@@ -8,13 +8,15 @@
  * Licensed under the MIT license.
  */
 
-var merge = require('lodash.merge'),
+var indent = require('indent'),
+    merge = require('lodash.merge'),
     defaultOptions = {
         useStrict: true,
         prependSemicolon: true,
         trimCode: true,
         args: null,
-        params: null
+        params: null,
+        indent: null
     };
 
 module.exports = {
@@ -24,11 +26,12 @@ module.exports = {
         var wrapOptions = merge({}, defaultOptions, options),
             args = wrapOptions.args || wrapOptions.params || [],
             params = wrapOptions.params || wrapOptions.args || [],
+            source = (wrapOptions.useStrict ? '\'use strict\';\n' : '') +
+                (wrapOptions.trimCode ? code.trim() : code),
             result = [
                 (wrapOptions.prependSemicolon ? ';' : '') + '(function(' + params.join(', ') + ') {',
-                wrapOptions.useStrict ? '\'use strict\';' : '',
-                wrapOptions.trimCode ? code.trim() : code,
-                '}' + (wrapOptions.bindThis ? '.bind(this)' : '') + '(' + args.join(', ') + '));'
+                wrapOptions.indent ? indent(source, wrapOptions.indent) : source,
+                '}' + (wrapOptions.bindThis ? '.bind(this)' : '') + '(' + args.join(', ') + '));\n'
             ];
 
         return result
