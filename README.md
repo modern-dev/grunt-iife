@@ -109,6 +109,13 @@ Default: `null`
 
 An array of parameter names to be accepted by the IIFE. If the [`args`](#args) option is not specified, the same identifiers will be passed as arguments of the function call.
 
+### `indent`
+
+Type: `String`
+Default: `null`
+
+A string value that is used to indent.
+
 Here's an example specifying all available options:
 
 ```js
