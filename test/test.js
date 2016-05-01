@@ -2,7 +2,7 @@
  * grunt-iife - a Grunt plugin for wrapping JavaScript code in IIFEs.
  * https://github.com/virtyaluk/grunt-iife
  *
- * Copyright (c) 2015 Bohdan Shtepan
+ * Copyright (c) 2016 Bohdan Shtepan
  * http://modern-dev.com/
  *
  * Licensed under the MIT license.
@@ -98,5 +98,11 @@ describe('IIFE', function() {
 
             expect(iife(this.code, { args: ['window'] })).to.be.equal(expectedResult);
         });
+
+        it('should apply custom indentation', function() {
+            var expectedResult = ';(function() {\n    \'use strict\';\n    var foo = \'bar\';\n}());\n';
+
+            expect(iife(this.code, { indent: '    ' })).to.be.equal(expectedResult);
+		});
     });
 });
