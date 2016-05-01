@@ -163,7 +163,7 @@ Output file:
 
  - Fixed [issue](https://github.com/virtyaluk/grunt-iife/issues/1) resulting in error while performing *iife* task.
 
-### 0.3.0 (Mai 1, 2016)
+### 0.3.0 (May 1, 2016)
 
  - Added new feature - *indentation of code*. [@brunowego](https://github.com/brunowego) in [#3](https://github.com/virtyaluk/grunt-iife/pull/3).
  - Codebase improvements.
