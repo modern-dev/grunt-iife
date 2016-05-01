@@ -31,7 +31,7 @@ module.exports = {
             result = [
                 (wrapOptions.prependSemicolon ? ';' : '') + '(function(' + params.join(', ') + ') {',
                 wrapOptions.indent ? indent(source, wrapOptions.indent) : source,
-                '}' + (wrapOptions.bindThis ? '.bind(this)' : '') + '(' + args.join(', ') + '));'
+                '}' + (wrapOptions.bindThis ? '.bind(this)' : '') + '(' + args.join(', ') + '));\n'
             ];
 
         return result
