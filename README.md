@@ -31,13 +31,13 @@ This configuration will wrap JS files using the default options.
 ```js
 // Project configuration.
 grunt.initConfig({
-	iife: {
-		myTarget: {
-			files: {
-				'dest/output.js': 'src/input.js'
-			}
-		}
-	}
+    iife: {
+        myTarget: {
+            files: {
+                'dest/output.js': 'src/input.js'
+            }
+        }
+    }
 });
 ```
 
@@ -66,6 +66,7 @@ You can pass additional options to change output file:
 - [`trimCode`](#trimCode)
 - [`args`](#args)
 - [`params`](#params)
+- [`indent`](#indent)
 
 ### `useStrict`
 
@@ -120,21 +121,22 @@ Here's an example specifying all available options:
 
 ```js
 grunt.initConfig({
-	iife: {
-		myTarget: {
-			options: {
-				useStrict: true,
-				prependSemicolon: false,
-				bindThis: true,
-				trimCode: true,
-				args: ['window', '$'],
-				params: ['window', 'jQuery']
-			},
-			files: {
-				'dest/output.js': 'src/input.js'
-			}
-		}
-	}
+    iife: {
+        myTarget: {
+            options: {
+                useStrict: true,
+                prependSemicolon: false,
+                bindThis: true,
+                trimCode: true,
+                indent
+                args: ['window', '$'],
+                params: ['window', 'jQuery']
+            },
+            files: {
+                'dest/output.js': 'src/input.js'
+            }
+        }
+    }
 });
 ```
 
@@ -149,17 +151,28 @@ Output file:
 
 ```js
 (function(window, $) {
-'use strict';
-var foo = 'bar';
-console.log(foo);
+    'use strict';
+    var foo = 'bar';
+    console.log(foo);
 }(window, jQuery));
 ```
+
+## :scroll: Changelog
+
+### 0.2.0 (April 30, 2016)
+
+ - Fixed [issue](https://github.com/virtyaluk/grunt-iife/issues/1) resulting in error while performing *iife* task.
+
+### 0.3.0 (Mai 1, 2016)
+
+ - Added new feature - *indentation of code*. [@brunowego](https://github.com/brunowego) in [#3](https://github.com/virtyaluk/grunt-iife/pull/3).
+ - Codebase improvements.
 
 ## :green_book: License
 
 [Licensed under the MIT license.](https://github.com/virtyaluk/grunt-iife/blob/master/LICENSE)
 
-Copyright (c) 2016 Bohdan Shtepan
+Copyright (c) 2016 Bohdan Shtepan and all the [contributors](https://github.com/virtyaluk/grunt-iife/graphs/contributors).
 
 ---
 
