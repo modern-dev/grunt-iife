@@ -12,6 +12,8 @@ var iife = require('../tasks/lib/iife').wrap,
     expect = require('chai').expect;
 
 describe('IIFE', function() {
+    'use strict';
+
     describe('#wrap()', function() {
         before(function() {
             this.code = 'var foo = \'bar\';\n\n';
