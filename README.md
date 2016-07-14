@@ -42,12 +42,14 @@ grunt.initConfig({
 ```
 
 So, if input file looks like this:
+
 ```js
 var foo = 'bar';
 console.log(foo);
 ```
 
 Then output file will be like this:
+
 ```js
 ;(function() {
 'use strict';
@@ -60,60 +62,60 @@ console.log(foo);
 
 You can pass additional options to change output file:
 
-- [`useStrict`](#useStrict)
-- [`prependSemicolon`](#prependSemicolon)
-- [`bindThis`](#bindThis)
-- [`trimCode`](#trimCode)
+- [`useStrict`](#usestrict)
+- [`prependSemicolon`](#prependsemicolon)
+- [`bindThis`](#bindthis)
+- [`trimCode`](#trimcode)
 - [`args`](#args)
 - [`params`](#params)
 - [`indent`](#indent)
 
 ### `useStrict`
 
-Type: `Boolean`
-Default: `true`
+- Type: `Boolean`
+- Default: `true`
 
 A boolean indicating whether to prepend a `'use strict';` directive to the function body.
 
 ### `prependSemicolon`
 
-Type: `Boolean`
-Default: `true`
+- Type: `Boolean`
+- Default: `true`
 
 A boolean indicating whether to prepend a semicolon as statement terminator before the IIFE.
 
 ### `bindThis`
 
-Type: `Boolean`
-Default: `false`
+- Type: `Boolean`
+- Default: `false`
 
 A boolean indicating whether to append `.bind(this)` to the IIFE. Setting this value to `true` makes the surrounding global object available to the function, which is usually not the case in strict mode.
 
 ### `trimCode`
 
-Type: `Boolean`
-Default: `true`
+- Type: `Boolean`
+- Default: `true`
 
 A boolean indicating whether to remove leading & trailing whitespace from the code.
 
 ### `args`
 
-Type: `String[]`
-Default: `null`
+- Type: `String[]`
+- Default: `null`
 
 An array of argument names to be passed into the IIFE. If the [`params`](#params) option is not specified, the parameters of the function will have the same names as the arguments passed.
 
 ### `params`
 
-Type: `String[]`
-Default: `null`
+- Type: `String[]`
+- Default: `null`
 
 An array of parameter names to be accepted by the IIFE. If the [`args`](#args) option is not specified, the same identifiers will be passed as arguments of the function call.
 
 ### `indent`
 
-Type: `String`
-Default: `null`
+- Type: `String`
+- Default: `null`
 
 A string value that is used to indent.
 
@@ -161,12 +163,12 @@ Output file:
 
 ### 0.2.0 (April 30, 2016)
 
- - Fixed [issue](https://github.com/virtyaluk/grunt-iife/issues/1) resulting in error while performing *iife* task.
+- Fixed [issue](https://github.com/virtyaluk/grunt-iife/issues/1) resulting in error while performing *iife* task.
 
 ### 0.3.0 (May 1, 2016)
 
- - Added new feature - *indentation of code*. [@brunowego](https://github.com/brunowego) in [#3](https://github.com/virtyaluk/grunt-iife/pull/3).
- - Codebase improvements.
+- Added new feature - *indentation of code*. [@brunowego](https://github.com/brunowego) in [#3](https://github.com/virtyaluk/grunt-iife/pull/3).
+- Codebase improvements.
 
 ## :green_book: License
 
